@@ -20,4 +20,4 @@ function NavBar() {
         )
     
 }
-ReactDOM.render(<NavBar />, document.getElementById('root'));
+export default NavBar
