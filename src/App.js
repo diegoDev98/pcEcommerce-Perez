@@ -1,19 +1,13 @@
-import logo from './logo.png';
 import './App.css';
 import NavBar from './components/NavBar'
-
+import ItemListContainer from './components/ItemListContainer'
 function App() {
   return (
-    <div className="App">
+    <div >
       <NavBar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        
-        <p>
-          Diego's PC Component Store
-        </p>
-       
-      </header>
+      <ItemListContainer/>
+     
+      
     </div>
   );
 }
