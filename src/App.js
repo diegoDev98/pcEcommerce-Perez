@@ -1,11 +1,11 @@
 import './App.css';
-import NavBar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer'
+import NavBar from './components/NavBar/NavBar'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 function App() {
   return (
     <div >
       <NavBar />
-      <ItemListContainer/>
+      <ItemListContainer greeting ="Welcome to Diego's Pc Parts"/>
      
       
     </div>
