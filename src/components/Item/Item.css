@@ -15,7 +15,10 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     box-shadow: 2px 2px 5px black;
+    min-width: 250px;
+    max-width: 400px;
 }
 .item img {
     width: 200px;
+    filter: drop-shadow(2px 4px 6px black);
 }

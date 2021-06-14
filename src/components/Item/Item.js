@@ -9,7 +9,7 @@ function Item(props) {
                 <h3>{props.name}</h3>
                 <img src={props.src} />
                 <p>{props.desc}</p>
-                <ItemCount initial= {1} stock="5"/>
+                <ItemCount initial={props.initial} stock={props.stock}/>
             </div>
         )
     
