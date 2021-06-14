@@ -9,7 +9,7 @@ class ItemListContainer extends React.Component {
         return (
             <div className="itemListContainer">
                 <h1>{this.props.greeting}</h1>
-                <Item name="CPU" src="./images/inteli7.png" desc="A cool cpu"/>
+                <Item name="CPU" src="./images/inteli7.png" desc="A cool cpu" />
                 <Item name="CPU" src="./images/inteli7.png" desc="A cool cpu"/>
                 <Item name="CPU" src="./images/inteli7.png" desc="A cool cpu"/>
                 <Item name="CPU" src="./images/inteli7.png" desc="A cool cpu"/>

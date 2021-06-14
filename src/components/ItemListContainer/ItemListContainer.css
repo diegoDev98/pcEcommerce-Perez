@@ -5,3 +5,7 @@
     flex-direction: row;
     padding: 100px;
 }
+.itemListContainer h1 {
+    width: 100%;
+    text-align: center;
+}

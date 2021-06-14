@@ -1,0 +1,10 @@
+.ItemCount {
+    display: flex;
+    width: 50%;
+}
+.subtract {flex-basis: 20%;}
+.add {flex-basis: 20%;}
+.countNumber {
+    text-align: center;
+    flex-basis: 60%;
+}
