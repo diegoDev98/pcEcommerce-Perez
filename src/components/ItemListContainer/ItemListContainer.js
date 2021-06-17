@@ -1,6 +1,5 @@
 import './ItemListContainer.css'
 import React, {useEffect,useState} from 'react'
-import ReactDom from 'react-dom'
 import ItemList from './ItemList/ItemList'
 
 
@@ -46,35 +45,38 @@ const productsData =  [{
   stock:2
 }]
 
+//Array de Objetos se llama productsData
 
 
+ function ItemListContainer(props) {
 
-export default function ItemListContainer(props) {
 
-
-const [products,setProducts] = useState([]);
+  const [products,setProducts] = useState([]); //inicializa products como state
 
 
   useEffect(() => {
-    new Promise( (resolve,reject) => {
-      setTimeout(resolve(productsData),3000);
+    new Promise( (resolve) => {
+      setTimeout(()=>resolve(productsData),3000) //en 3 segundos deberia resolver la info de los productos
       
     }).then(
       
-      function(productsData) {
-        setProducts(productsData)
+      function(productsData) { //luego deberia agarrar la info
+        setProducts(productsData); //y setearselo a products
+        console.log(products) //esto es para testear que products sea un array de 5 objetos y no vacio
+                              //por algun motivo este console devuelve array vacio. Pero si lo hago dentro de el ItemList me devuelve el array lleno. Sin embargo ninguno de los items se renderizan.
         
       }
     )  
   }, [])
   
-
+//aca pasa array de productos como prop a ItemList para que se renderize en otro componente
 return (
   <div className="itemListContainer">
       <h1>{props.greeting}</h1>
-      <ItemList items={products}/>
+      <ItemList items={products}> </ItemList>
   </div>
 )     
     
 
 }
+export default ItemListContainer;

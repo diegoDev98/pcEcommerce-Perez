@@ -8,13 +8,13 @@ function NavBar() {
             <nav className="navbar navbar-inverse">
               <div className="container-fluid">
                 <div className="navbar-header">
-                  <a className="navbar-brand" href="#">DiegoTech</a>
+                  <a className="navbar-brand" href="https://www.google.com">DiegoTech</a>
                 </div>
                 <ul className="nav navbar-nav">
-                  <li className="active"><a href="#">Home</a></li>
-                  <li><a href="#">Pc Parts</a></li>
-                  <li><a href="#">Monitors</a></li>
-                  <li><a href="#">Games</a></li>
+                  <li className="active"><a href="https://www.google.com">Home</a></li>
+                  <li><a href="https://www.google.com">Pc Parts</a></li>
+                  <li><a href="https://www.google.com">Monitors</a></li>
+                  <li><a href="https://www.google.com">Games</a></li>
                 </ul>
                 <CartWidget/>
               </div> 

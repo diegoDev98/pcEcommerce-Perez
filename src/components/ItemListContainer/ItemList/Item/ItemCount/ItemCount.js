@@ -1,13 +1,11 @@
-import React, {Component,useState,useEffect} from 'react';
+import React, {useState} from 'react';
 import './ItemCount.css'
 
 
 
 function ItemCount ({stock , initial, onAdd}) {
    let [num,setNum] = useState(initial);
-   function onAdd() {
-       alert('Item Added To Cart')
-   }
+  
    
     return (
         <>
