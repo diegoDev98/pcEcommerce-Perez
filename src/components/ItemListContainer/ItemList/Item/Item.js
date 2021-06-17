@@ -13,7 +13,5 @@ function Item(props) {
                 <ItemCount initial={props.initial} stock={props.stock}/>
             </div>
         )
-    
-
 }
 export default Item;
