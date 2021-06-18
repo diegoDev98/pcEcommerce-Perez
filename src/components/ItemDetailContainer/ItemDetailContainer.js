@@ -18,7 +18,6 @@ const product = {
   });
 };
 
-<h1>lorem ipsum</h1>
 export default function ItemDetailContainer(){
   const [article, setArticle] = useState({});
 
