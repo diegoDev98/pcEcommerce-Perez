@@ -1,19 +1,24 @@
-import logo from './logo.png';
 import './App.css';
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import {BrowserRouter as Router,Route,Switch,Link} from 'react-router-dom';
+
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        
-        <p>
-          Diego's PC Component Store
-        </p>
-       
-      </header>
+    <div >
+      <Router>
+        <NavBar />
+        <Route path="/item/:id">
+          <ItemDetailContainer className="itemDetailContainer" />
+        </Route>
+        <Route exact path={['/','/category/:id']}>
+          <ItemListContainer greeting ="Welcome to Diego's Pc Parts"/>
+        </Route>
+      </Router>
+      
+      
     </div>
   );
 }
