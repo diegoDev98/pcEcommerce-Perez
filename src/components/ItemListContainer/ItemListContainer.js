@@ -9,7 +9,7 @@ const productsData =  [{
   title:'intel i7 10000k',
   description:'A good processor',
   price:'10000$',
-  url:'./images/inteli7.png',
+  url:'/images/inteli7.png',
   stock:5
 },
 {
@@ -17,7 +17,7 @@ const productsData =  [{
   title:'intel i3 10000k',
   description:'A good processor',
   price:'20000$',
-  url:'./images/inteli7.png',
+  url:'/images/inteli7.png',
   stock:20
 },
 {
@@ -25,7 +25,7 @@ const productsData =  [{
   title:'intel i5 10000k',
   description:'A good processor',
   price:'30000$',
-  url:'./images/inteli7.png',
+  url:'/images/inteli7.png',
   stock:13
 },
 {
@@ -33,7 +33,7 @@ const productsData =  [{
   title:'intel i9 10000k',
   description:'A good processor',
   price:'50000$',
-  url:'./images/inteli7.png',
+  url:'/images/inteli7.png',
   stock:9
 },
 {
@@ -41,7 +41,7 @@ const productsData =  [{
   title:'ryzen 3600',
   description:'A good processor',
   price:'18000$',
-  url:'./images/inteli7.png',
+  url:'/images/inteli7.png',
   stock:2
 }]
 

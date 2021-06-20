@@ -1,7 +1,7 @@
 import React from 'react'
 import CartWidget from './CartWidget'
 import './NavBar.css'
-import {NavLink,Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 const categories = [
   {id:1, category: 'Home'},
@@ -19,8 +19,8 @@ function NavBar() {
                   <NavLink className="navbar-brand" to="/">DiegoTech</NavLink>
                 </div>
                 <ul className="nav navbar-nav">
-                {categories.map(category =>
-												<NavLink to={`/category/${category.category.toLowerCase()}`} activeClassName="dropdown-item"><li>{category.category}</li></NavLink>
+                {categories.map( (category,index) =>
+                  <NavLink to={`/category/${category.category.toLowerCase()}`} key={index} activeClassName="dropdown-item"><li>{category.category}</li></NavLink>
 												)}
                  
                   
