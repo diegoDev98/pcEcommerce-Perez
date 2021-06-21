@@ -18,7 +18,7 @@ const products =  [{
   description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquamnihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdamrecusandae alias error harum maxime adipisci amet laborum. Perspiciatis minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit ',
   price:'20000$',
   url:'/images/rtx3080ti.png',
-  stock:20,
+  stock:10,
   category:'pcparts'
 },
 {
@@ -28,7 +28,7 @@ const products =  [{
   
   price:'30000$',
   url:'/images/ic3monitor.png',
-  stock:13,
+  stock:4,
   category:'monitors'
 },
 {
@@ -37,7 +37,7 @@ const products =  [{
   description:'A good game',
   price:'50000$',
   url:'/images/inteli7.png',
-  stock:9,
+  stock:20,
   category:'games'
 },
 {
@@ -46,7 +46,7 @@ const products =  [{
   description:'A good game',
   price:'18000$',
   url:'/images/inteli510600.png',
-  stock:2,
+  stock:15,
   category:'pcparts'
 },
 {
@@ -55,14 +55,14 @@ const products =  [{
   description:'A good game',
   price:'6000$',
   url:'/images/thelastofus2.png',
-  stock:2,
+  stock:30,
   category:'games'
 }]
  const getProduct = () => {
   return new Promise((res, rej) => {
     setTimeout(() => {
       res(products);
-    }, 1000);
+    }, 50);
   });
 };
 

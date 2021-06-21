@@ -24,15 +24,20 @@
     color: black;
     text-decoration: none;
 }
-.item a div {
-    position: absolute;
-    top: 15px;
-    left: 25px;
+.item h3 {
+    text-align: center;
 }
+.itemId {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+}
+
+
 .imgcontainer {
     display: flex;
     width: 250px;
-    height: 250px;
+    height: 197px;
     justify-content: center;
     align-items: center;
 }

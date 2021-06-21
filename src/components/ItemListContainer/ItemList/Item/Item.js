@@ -8,12 +8,13 @@ function Item(props) {
         return (
             <div className="item">
                 <Link to = {`/item/${props.id}`}>
-                <div>{props.id}</div>
-                <h3>{props.title}</h3>
-                </Link>
+                    <div className="itemId">{props.id}</div>
+                    <h3>{props.title}</h3>
+                
                 <div className="imgcontainer">
                 <img src={props.url} alt={props.title} />
                 </div>
+                </Link>
                 
                 <h4>{props.price}</h4>
                 <ItemCount 
