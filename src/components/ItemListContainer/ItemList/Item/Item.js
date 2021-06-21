@@ -11,7 +11,10 @@ function Item(props) {
                 <div>{props.id}</div>
                 <h3>{props.title}</h3>
                 </Link>
+                <div className="imgcontainer">
                 <img src={props.url} alt={props.title} />
+                </div>
+                
                 <h4>{props.price}</h4>
                 <ItemCount 
                     initial={props.initial} 

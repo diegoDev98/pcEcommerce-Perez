@@ -5,7 +5,7 @@ import {NavLink} from 'react-router-dom'
 
 const categories = [
   {id:1, category: 'Home'},
-  {id:2, category: 'PcParts'},
+  {id:2, category: 'Pc Parts'},
   {id:3, category: 'Games'},
   {id:4, category: 'Monitors'}
   ]
@@ -20,7 +20,7 @@ function NavBar() {
                 </div>
                 <ul className="nav navbar-nav">
                 {categories.map( (category,index) =>
-                  <li><NavLink to={`/category/${category.category.toLowerCase().trim()}`} key={index} activeClassName="dropdown-item">{category.category}</NavLink></li>
+                  <li><NavLink to={`/category/${category.category.toLowerCase().replace(/\s/g, '')}`} key={index} activeClassName="activeLink">{category.category}</NavLink></li>
 												)}
                  
                   

@@ -44,7 +44,7 @@ const productsData = [{
 },
 {
   id:'5',
-  title:'INTEL MICRO CORE I5 10600K',
+  title:'INTEL CORE I5 10600K',
   description:'A good game',
   price:'18000$',
   url:'/images/inteli510600.png',
