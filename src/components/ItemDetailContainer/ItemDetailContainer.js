@@ -5,19 +5,19 @@ import './ItemDetailContainer.css';
 
 const products =  [{
   id:'1',
-  title:'intel i7 10000k',
+  title:'Motherboard Gamer Asus Rog Strix B450-f Gaming 2 Am4 B450',
   description:'A good processor',
-  price:'10000$',
-  url:'/images/inteli7.png',
+  price:'20000$',
+  url:'/images/asusStrixMB.png',
   stock:5,
   category:'pcparts'
 },
 {
   id:'2',
-  title:'intel i3 10000k',
+  title:'Rtx 3080 Ti 12gb Pny Gaming Xlr8 Rgb',
   description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquamnihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdamrecusandae alias error harum maxime adipisci amet laborum. Perspiciatis minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit ',
   price:'20000$',
-  url:'/images/inteli7.png',
+  url:'/images/rtx3080ti.png',
   stock:20,
   category:'pcparts'
 },
@@ -33,7 +33,7 @@ const products =  [{
 },
 {
   id:'4',
-  title:'intel i9 10000k',
+  title:'intel i7 10000k',
   description:'A good game',
   price:'50000$',
   url:'/images/inteli7.png',
@@ -46,6 +46,15 @@ const products =  [{
   description:'A good game',
   price:'18000$',
   url:'/images/inteli510600.png',
+  stock:2,
+  category:'pcparts'
+},
+{
+  id:'6',
+  title:'The Last of Us Part II Standard Edition Sony PS4 Físico',
+  description:'A good game',
+  price:'6000$',
+  url:'/images/thelastofus2.png',
   stock:2,
   category:'games'
 }]
