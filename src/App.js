@@ -14,7 +14,7 @@ function App() {
           <ItemDetailContainer className="itemDetailContainer" />
         </Route>
         <Route exact path={['/','/category/:category']}>
-          <ItemListContainer greeting ="Welcome to Diego's Pc Parts"/>
+          <ItemListContainer greeting ="Bienvenido a DiegoTech"/>
         </Route>
       </Router>
       

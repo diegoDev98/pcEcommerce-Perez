@@ -72,7 +72,7 @@ const productsData = [{
 
   useEffect(() => {
     new Promise( (resolve) => {
-      setTimeout(()=>resolve(productsData),3000) //en 3 segundos deberia resolver la info de los productos
+      setTimeout(()=>resolve(productsData),2000) //en 3 segundos deberia resolver la info de los productos
       
     }).then(
       
@@ -92,7 +92,9 @@ const productsData = [{
 //aca pasa array de productos como prop a ItemList para que se renderize en otro componente
 return (
   <div className="itemListContainer">
+    <div id="headerContainer">
       <h1>{props.greeting}</h1>
+    </div>
       <ItemList items={products}> </ItemList>
   </div>
 )     

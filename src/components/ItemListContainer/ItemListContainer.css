@@ -3,10 +3,49 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: row;
-    padding: 100px;
+    
 }
 .itemListContainer h1 {
     color: white;
-    width: 100%;
     text-align: center;
+    display: inline-block;
+    font-family: 'Source Code Pro', monospace;
+    position: relative;
+}
+#headerContainer {
+    background-color: #222;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.itemListContainer h1::before,.itemListContainer h1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+.itemListContainer h1::before {
+
+   background-color: #222;
+    animation:typewriter 5s steps(22) forwards;
+}
+h1::after {
+    width: .125em;
+    background: white;
+    animation:typewriter 5s steps(22) forwards,
+                blink 500ms steps(22) infinite;
+}
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+@keyframes blink {
+     to {
+         background: transparent;
+     }   
 }
