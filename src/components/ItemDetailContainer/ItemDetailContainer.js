@@ -1,32 +1,69 @@
 import React,{useState,useEffect} from "react";
+import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail/ItemDetail";
 import './ItemDetailContainer.css';
 
-const product = {
+const products =  [{
+  id:'1',
+  title:'intel i7 10000k',
+  description:'A good processor',
+  price:'10000$',
+  url:'/images/inteli7.png',
+  stock:5
+},
+{
+  id:'2',
+  title:'intel i3 10000k',
+  description:'A good processor',
+  price:'20000$',
+  url:'/images/inteli7.png',
+  stock:20
+},
+{
+  id:'3',
+  title:'intel i5 10000k',
+  description:'A good processor',
+  price:'30000$',
+  url:'/images/inteli7.png',
+  stock:13
+},
+{
+  id:'4',
+  title:'intel i9 10000k',
+  description:'A good processor',
+  price:'50000$',
+  url:'/images/inteli7.png',
+  stock:9
+},
+{
   id:'5',
   title:'ryzen 3600',
-  description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquamnihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdamrecusandae alias error harum maxime adipisci amet laborum. Perspiciatis minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur fugiat, temporibus enim commodi iusto libero magni deleniti quod quam consequuntur! Commodi minima excepturi repudiandae velit hic maximedoloremque. Quaerat provident commodi consectetur veniam similique ad earum omnis ipsum saepe, voluptas, hic voluptates pariatur est explicabo fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores labore suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto ab laudantium',
+  description:'A good processor',
   price:'18000$',
   url:'/images/inteli7.png',
   stock:2
-}
+}]
  const getProduct = () => {
   return new Promise((res, rej) => {
     setTimeout(() => {
-      res(product);
+      res(products);
     }, 1000);
   });
 };
 
 export default function ItemDetailContainer(){
   const [article, setArticle] = useState({});
+  const {id}=useParams();
+  console.log(id);
 
   useEffect(() => {
 
     getProduct()
-      .then((product) => {
-          setArticle(product);
-          console.log(article)
+      .then((products) => {
+          const product = products.filter(u => u.id == id);
+          console.log(product)
+          setArticle(product[0]);
+         
       })
       .catch(() => console.log("rejected"));
 
