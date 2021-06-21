@@ -1,10 +1,10 @@
 .ItemCount {
     display: flex;
-    width: 53%;
+    width: 135px;
 }
 .counter {
     background: transparent;
-    flex-basis: 20%;
+    flex-basis: 30%;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 5px;
@@ -22,7 +22,7 @@
 }
 
 .addToCart {
-    width: 52%;
+    width: 135px;
     padding: 10px;
     margin-top: 10px;
 }

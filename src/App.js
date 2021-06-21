@@ -13,7 +13,7 @@ function App() {
         <Route path="/item/:id">
           <ItemDetailContainer className="itemDetailContainer" />
         </Route>
-        <Route exact path={['/','/category/:id']}>
+        <Route exact path={['/','/category/:category']}>
           <ItemListContainer greeting ="Welcome to Diego's Pc Parts"/>
         </Route>
       </Router>

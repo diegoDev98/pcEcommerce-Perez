@@ -11,13 +11,7 @@ nav {
     margin: 0 !important;
     width: 100%;
   }
-  nav ul li {
-   
-      border-radius: 5px;
-      display: inline-block;
-      padding: 15px;
-      color: white;
-  }
+
   nav ul li:hover {
       background-color: rgba(10, 7, 1, 0.521);
   }
