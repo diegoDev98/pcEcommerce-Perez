@@ -1,7 +1,7 @@
 
 import './ItemDetail.css'
-import ItemCount from '../../ItemListContainer/ItemList/Item/ItemCount/ItemCount'
-import {useState} from 'react'
+import ItemCount from '../../ItemCount/ItemCount'
+
 import { useCartContext } from '../../CartContext'
 
 export default function ItemDetail({item}) {
