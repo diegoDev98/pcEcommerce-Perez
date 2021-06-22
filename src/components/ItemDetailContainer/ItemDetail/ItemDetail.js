@@ -1,21 +1,13 @@
 
 import './ItemDetail.css'
 import ItemCount from '../../ItemListContainer/ItemList/Item/ItemCount/ItemCount'
-import { useEffect, useState } from 'react'
-import {Link} from 'react-router-dom'
-
-
+import {useState} from 'react'
+import { useCartContext } from '../../CartContext'
 
 export default function ItemDetail({item}) {
-let [btnDisplay,setBtnDisplay] = useState(false);
 
-useEffect(() => {
-    console.log(btnDisplay)
-} , [btnDisplay])
-    
-    function addToCart(quantity) {
-        alert('Item Added To Cart')
-    }
+
+const {addToCart } = useCartContext();
     return (
         <div className="itemDetail">
             <h1><i>{item.title && item.title.toUpperCase()}</i></h1><hr/>
@@ -26,16 +18,17 @@ useEffect(() => {
                 <div className="desc">
                     
                     <p>{item.description}</p>
-                    <h4>{item.price}</h4>
+                    <h4>${item.price}</h4>
                     <ItemCount 
-                        className ="counter"
-                        initial={1}
+                        detailContainer = {true}
+                        title={item.title}
+                        price = {item.price}
+                        id= {item.id}
+                        initial={1} 
                         stock={item.stock} 
-                        onAdd={ (quantityToAdd) => { 
-                            setBtnDisplay(true);
-                         } } 
+                        onAdd={ (title,quantity,id,price) => { addToCart(title,quantity,id,price) } } 
                     />
-                    {btnDisplay == true ? <Link to='/cart'><button className="btn btn-success">Termina Tu Compra</button> </Link>:console.log('nothing')}
+                    
                 </div>
                 </div> 
             </div>

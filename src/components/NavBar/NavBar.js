@@ -20,7 +20,7 @@ function NavBar() {
                 </div>
                 <ul className="nav navbar-nav">
                 {categories.map( (category,index) =>
-                  <li><NavLink to={`/category/${category.category.toLowerCase().replace(/\s/g, '')}`} key={index} activeClassName="activeLink">{category.category}</NavLink></li>
+                  <li key={index}><NavLink to={`/category/${category.category.toLowerCase().replace(/\s/g, '')}`} key={index} activeClassName="activeLink">{category.category}</NavLink></li>
 												)}
                  
                   
