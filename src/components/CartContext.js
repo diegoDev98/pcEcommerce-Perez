@@ -6,8 +6,18 @@ export const useCartContext = () => useContext(CartContext);
 
 export const CartProvider = function({children}){
 	const [items, setItems] = useState([]);
+	const [total, setTotal] = useState(0);
+	const [itemsInCart, setItemsInCart] = useState(0);
+	
 
-    useEffect(() => console.log('Items in cart have been updated',items) ,[items])
+    useEffect(() => {
+		var total=0;
+		for(var x=0;x<items.length;x++){
+			total += items[x].price;
+		}
+		setItemsInCart(items.length)
+	setTotal(total)
+	} ,[items])
     
 	const isInCart = function(id) {
 		return items.findIndex((obj => obj.id === id));
@@ -32,10 +42,9 @@ export const CartProvider = function({children}){
 	}
 
 	const removeItem = function(id){
+		console.log(id)
 		if (items.length > 0) {
-			const updateItems = items.filter(function (item){
-				return item.productId !== id;
-			});
+			const updateItems = items.filter(u=>u.id!=id);
 			setItems(updateItems);
 		}
 	}
@@ -44,7 +53,7 @@ export const CartProvider = function({children}){
 		setItems([]);
 	}
 
-return <CartContext.Provider value={{items, setItems, addToCart, removeItem}}>
+return <CartContext.Provider value={{items, setItems, addToCart, removeItem,clearItems,total,itemsInCart}}>
 {children}
 </CartContext.Provider>
 }
