@@ -10,7 +10,7 @@ export const CartProvider = function({children}){
     useEffect(() => console.log('Items in cart have been updated',items) ,[items])
     
 	const isInCart = function(id) {
-		return items.findIndex((obj => obj.id == id));
+		return items.findIndex((obj => obj.id === id));
 	}
 
 	const addToCart = function(name, quantity, id, price){
@@ -18,7 +18,7 @@ export const CartProvider = function({children}){
 
 		var item =[...items];
 
-		if(objIndex== -1 ) {
+		if(objIndex=== -1 ) {
 			item.push({'id': id, 'name': name, 'quantity': quantity, 'price': price*quantity})
 		}
 		else {

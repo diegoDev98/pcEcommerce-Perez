@@ -79,7 +79,7 @@ const productsData = [{
       function(productsData) { //luego deberia agarrar la info
         let newProductsData;
         
-        (category == 'pcparts')  || (category == 'games') || (category == 'monitors') ? newProductsData = productsData.filter(u => u.category == category): newProductsData = productsData;
+        (category === 'pcparts')  || (category === 'games') || (category === 'monitors') ? newProductsData = productsData.filter(u => u.category === category): newProductsData = productsData;
 
         setProducts(newProductsData); //y setearselo a products
                               //esto es para testear que products sea un array de 5 objetos y no vacio

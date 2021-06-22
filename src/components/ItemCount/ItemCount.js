@@ -14,7 +14,7 @@ function ItemCount ({stock , initial, onAdd,title,price,id,detailContainer}) {
     return (
         <>
         
-            {itemCountDisplay == true &&
+            {itemCountDisplay === true &&
             <div>
                 <div className="ItemCount">
                     <button className="counter" onClick={() => {num > 0 && setNum(num-1) }  } >-</button> 
