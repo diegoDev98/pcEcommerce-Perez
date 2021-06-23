@@ -1,49 +1,10 @@
 import './ItemListContainer.css'
 import React, {useEffect,useState} from 'react'
 import ItemList from './ItemList/ItemList'
+import { useParams } from 'react-router-dom';
+import { getFireStore } from '../../firebase';
 
 
-
-const productsData =  [{
-  id:'1',
-  title:'intel i7 10000k',
-  description:'A good processor',
-  price:'10000$',
-  url:'./images/inteli7.png',
-  stock:5
-},
-{
-  id:'2',
-  title:'intel i3 10000k',
-  description:'A good processor',
-  price:'20000$',
-  url:'./images/inteli7.png',
-  stock:20
-},
-{
-  id:'3',
-  title:'intel i5 10000k',
-  description:'A good processor',
-  price:'30000$',
-  url:'./images/inteli7.png',
-  stock:13
-},
-{
-  id:'4',
-  title:'intel i9 10000k',
-  description:'A good processor',
-  price:'50000$',
-  url:'./images/inteli7.png',
-  stock:9
-},
-{
-  id:'5',
-  title:'ryzen 3600',
-  description:'A good processor',
-  price:'18000$',
-  url:'./images/inteli7.png',
-  stock:2
-}]
 
 //Array de Objetos se llama productsData
 
@@ -52,27 +13,34 @@ const productsData =  [{
 
 
   const [products,setProducts] = useState([]); //inicializa products como state
-
+ const {category} = useParams()
 
   useEffect(() => {
-    new Promise( (resolve) => {
-      setTimeout(()=>resolve(productsData),3000) //en 3 segundos deberia resolver la info de los productos
-      
-    }).then(
-      
-      function(productsData) { //luego deberia agarrar la info
-        setProducts(productsData); //y setearselo a products
-        console.log(products) //esto es para testear que products sea un array de 5 objetos y no vacio
-                              //por algun motivo este console devuelve array vacio. Pero si lo hago dentro de el ItemList me devuelve el array lleno. Sin embargo ninguno de los items se renderizan.
-        
-      }
-    )  
-  }, [])
+    const db = getFireStore();
+    let itemCollection=db.collection('items');
+    if(category!==undefined && category!=='home') {
+      itemCollection= itemCollection.where('category','==',category) 
+    }
+   
+    
+    itemCollection.get().then(
+      (querySnapshot)=> {
+        if(querySnapshot.size===0){
+          console.log('No results!')
+        }
+        setProducts(querySnapshot.docs.map(doc=>doc.data()));
+      }).catch((error)=>{
+        console.log('error searching items',error);
+      })
+     
+  }, [category])
   
 //aca pasa array de productos como prop a ItemList para que se renderize en otro componente
 return (
   <div className="itemListContainer">
+    <div id="headerContainer">
       <h1>{props.greeting}</h1>
+    </div>
       <ItemList items={products}> </ItemList>
   </div>
 )     

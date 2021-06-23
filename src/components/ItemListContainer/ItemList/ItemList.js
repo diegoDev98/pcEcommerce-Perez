@@ -1,6 +1,7 @@
 import React from 'react'
 import Item from './Item/Item'
 
+
 function ItemList({items}){
 
 
@@ -8,18 +9,23 @@ function ItemList({items}){
         
             <>
                 {
-                items.map(u=> 
-                    <Item 
-                        initial={1} 
-                        title={u.title} 
-                        url={u.url} 
-                        price={u.price}  
-                        stock={u.stock} 
-                        key={u.id}
-                        id={u.id}
-                        >  
-                    </Item>)
+                items.map((u,index)=> 
+                    
+                        <Item 
+                            key={index}
+                            initial={1} 
+                            title={u.title} 
+                            url={u.url} 
+                            price={u.price}  
+                            stock={u.stock} 
+                            id={u.id}
+                            >  
+                        </Item>
+                    
+                    )
+                   
                     }
+                    
             </>
       
     )

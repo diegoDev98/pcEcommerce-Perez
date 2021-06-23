@@ -1,25 +1,36 @@
 
 import './ItemDetail.css'
-import ItemCount from '../../ItemListContainer/ItemList/Item/ItemCount/ItemCount'
+import ItemCount from '../../ItemCount/ItemCount'
+
+import { useCartContext } from '../../CartContext'
+
 export default function ItemDetail({item}) {
 
 
-
+const {addToCart } = useCartContext();
     return (
         <div className="itemDetail">
+            <h1><i>{item.title && item.title.toUpperCase()}</i></h1><hr/>
+            <div className="itemInfo">
                 <div className="detailImageContainer">
                     <img src={item.url} alt={item.title}  className="image"/>
                 </div>
                 <div className="desc">
-                    <h2><i>{item.title && item.title.toUpperCase()}</i></h2>
+                    
                     <p>{item.description}</p>
-                    <h4>{item.price}</h4>
+                    <h4>${item.price}</h4>
                     <ItemCount 
-                    initial={1}
-                    stock={item.stock} 
-                    onAdd={ () => { alert('Item Added To Cart') } } />
+                        detailContainer = {true}
+                        title={item.title}
+                        price = {item.price}
+                        id= {item.id}
+                        initial={1} 
+                        stock={item.stock} 
+                        onAdd={ (title,quantity,id,price) => { addToCart(title,quantity,id,price) } } 
+                    />
+                    
                 </div>
-                
+                </div> 
             </div>
     )
 }

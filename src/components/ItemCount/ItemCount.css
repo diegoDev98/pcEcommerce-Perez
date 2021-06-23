@@ -1,11 +1,12 @@
 .ItemCount {
     display: flex;
-    width: 53%;
+    width: 135px;
 }
 .counter {
-    background: transparent;
-    flex-basis: 20%;
-    border: 1px solid grey;
+    color: black;
+    background: white;
+    flex-basis: 30%;
+    border: 2px solid black;
     border-radius: 5px;
     padding: 5px;
     -webkit-border-radius: 5px;
@@ -15,6 +16,8 @@
 }
 
 .countNumber {
+    font-weight: 900;
+    font-size: 15px;
     justify-content: center;
     display: flex;
     flex-basis: 60%;
@@ -22,7 +25,7 @@
 }
 
 .addToCart {
-    width: 52%;
+    width: 135px;
     padding: 10px;
     margin-top: 10px;
 }

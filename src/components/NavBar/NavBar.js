@@ -1,6 +1,14 @@
 import React from 'react'
-import CartWidget from './CartWidget'
+import CartIcon from './CartIcon'
 import './NavBar.css'
+import {NavLink} from 'react-router-dom'
+
+const categories = [
+  {id:1, category: 'Home'},
+  {id:2, category: 'Pc Parts'},
+  {id:3, category: 'Games'},
+  {id:4, category: 'Monitors'}
+  ]
 
 function NavBar() {
     
@@ -8,15 +16,17 @@ function NavBar() {
             <nav className="navbar navbar-inverse">
               <div className="container-fluid">
                 <div className="navbar-header">
-                  <a className="navbar-brand" href="https://www.google.com">DiegoTech</a>
+                  <NavLink className="navbar-brand" to="/">DiegoTech</NavLink>
                 </div>
                 <ul className="nav navbar-nav">
-                  <li className="active"><a href="https://www.google.com">Home</a></li>
-                  <li><a href="https://www.google.com">Pc Parts</a></li>
-                  <li><a href="https://www.google.com">Monitors</a></li>
-                  <li><a href="https://www.google.com">Games</a></li>
+                {categories.map( (category,index) =>
+                  <li key={index}><NavLink to={`/category/${category.category.toLowerCase().replace(/\s/g, '')}`} key={index} activeClassName="activeLink">{category.category}</NavLink></li>
+												)}
+                 
+                  
                 </ul>
-                <CartWidget/>
+                <NavLink to='/cart'><CartIcon/></NavLink>
+                
               </div> 
           </nav>
         )
