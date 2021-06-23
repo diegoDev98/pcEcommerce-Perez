@@ -4,7 +4,8 @@ function CartItem(props) {
     var deleteItem = {
         color:'red',
         fontSize:'20px',
-        fontWeight:'800' 
+        fontWeight:'800',
+        cursor:'pointer'
     }
     return (
         <tr className="cartItem">
