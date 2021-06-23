@@ -19,3 +19,16 @@ nav {
     background-color: rgba(10, 7, 1, 0.521);
     color: white!important;
 }
+.circle {
+    position: relative;
+    bottom: 5px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    border-radius: 50%;
+    background-color: #1f982dad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,33 @@
+.cart {
+    color: white;
+    
+}
+
+.emptyCart {
+    text-align: center;
+    font-size: 40px;
+}
+
+th,td,tr {
+    text-align: center;
+}
+
+.cart table {
+    width: 60%;
+    background-color: transparent;
+    margin: 30px auto 0;
+}
+
+.cartItem td {
+    padding: 15px;
+}
+.clearCartIcon{
+    background-color: rgba(207, 12, 12, 0.685);
+    border-radius: 10px;
+    padding: 5px;
+    display: block;
+    margin: auto;
+    
+}
+
+

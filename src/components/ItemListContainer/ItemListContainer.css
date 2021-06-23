@@ -31,6 +31,7 @@
 .itemListContainer h1::before {
 
    background-color: #222;
+   height: 105%;
     animation:typewriter 5s steps(22) forwards;
 }
 h1::after {
@@ -48,4 +49,9 @@ h1::after {
      to {
          background: transparent;
      }   
+}
+@media only screen and (max-width:430px){
+    .itemListContainer h1 {
+        font-size: 28px;
+    }
 }
