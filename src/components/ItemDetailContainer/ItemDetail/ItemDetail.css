@@ -3,6 +3,7 @@
 }
 .itemDetail {
     align-items: center;
+    position: relative;
 }
 .itemDetail h1 {
     padding: 20px;
@@ -50,4 +51,14 @@ align-items: center;
    .itemDetail .image {
        width: 320px;
    }
+}
+.detailso {
+    right: -122px;
+    bottom: -128px;
+    position: absolute;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
 }

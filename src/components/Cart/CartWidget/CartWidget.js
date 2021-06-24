@@ -32,12 +32,20 @@ function CartWidget(props) {
                 remove={()=>{removeItem(u.id)}}
             />)}
             <tr>
-                <td colSpan="5" className="total">Total:  ${total}</td> 
+                <td colspan="5" className="total">Total:  ${total}</td> 
+            </tr>
+            <tr>
+                <td colspan="5" style={{position:'relative'}} >
+                    
+                <Link to="/checkout"><button className="checkoutBtn"> Checkout</button></Link>
+                <button className="clearCartIcon" onClick={()=>{clearItems()}}>Clear Items</button>
+                </td> 
+              
             </tr>
             </tbody>
             </table>
-            <button className="clearCartIcon" onClick={()=>{clearItems()}}>Clear Items</button>
-            <Link to="/checkout"><button> Checkout</button></Link>
+            
+            
         </div>
        ) : <div className="emptyCart">
            Cart is empty

@@ -1,11 +1,13 @@
 
 import './ItemDetail.css'
 import ItemCount from '../../ItemCount/ItemCount'
+import { useState } from 'react'
+import soldout from './../../ItemListContainer/ItemList/Item/soldout.png'
 
 import { useCartContext } from '../../CartContext'
 
 export default function ItemDetail({item}) {
-
+const [stock,setStock] = useState(item.stock)
 
 const {addToCart } = useCartContext();
     return (
@@ -23,14 +25,15 @@ const {addToCart } = useCartContext();
                         detailContainer = {true}
                         title={item.title}
                         price = {item.price}
+                        setStock={setStock}
                         id= {item.id}
-                        initial={1} 
+                        initial={0} 
                         stock={item.stock} 
                         onAdd={ (title,quantity,id,price) => { addToCart(title,quantity,id,price) } } 
                     />
-                    
                 </div>
                 </div> 
+                <img src={soldout} className="detailso"></img>
             </div>
     )
 }

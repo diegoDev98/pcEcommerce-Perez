@@ -5,6 +5,7 @@ import { getFireStore } from '../../firebase';
 import LastSteps from './LastSteps/LastSteps';
 
 
+
 export default function Checkout() {
     const {items} = useCartContext();
     const {total} = useCartContext();
@@ -14,7 +15,6 @@ export default function Checkout() {
     return (
         checkout==true ? (
         <div className="checkout">
-   
                 <div>
                     <label for="name">Nombre: </label>
                     <input type="text" id="name" name="name" placeholder="John Doe" onChange={validateName}></input><span id="nameErr"></span>

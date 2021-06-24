@@ -29,3 +29,8 @@
     padding: 10px;
     margin-top: 10px;
 }
+#disabledbtn {
+    opacity: 0.6;
+    cursor: no-drop;
+    pointer-events: none;
+}
