@@ -5,6 +5,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 import { CartProvider } from './components/CartContext';
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   
@@ -23,6 +24,10 @@ function App() {
         <Route exact path={['/','/category/:category']}>
           <ItemListContainer greeting ="Bienvenido a DiegoTech"/>
         </Route>
+        <Route path ="/checkout">
+          <Checkout/>
+        </Route>
+        
         </CartProvider>
       </Router>
       

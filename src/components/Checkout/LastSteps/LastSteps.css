@@ -1,0 +1,32 @@
+
+.detalles {
+    text-align: center;
+    color: white;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+  
+  #arrow {
+      position: relative;
+     
+      filter:drop-shadow(1px 1px 10px white);
+      animation: arrow 700ms linear infinite;
+      -webkit-filter:drop-shadow(1px 1px 10px white);
+}
+#arrow,.whatsappDiv {
+    display: inline-block;
+    position: relative;
+    left: 100px;
+}
+  
+  
+  
+ 
+  @keyframes arrow {
+    0% {left: 0px;}
+    50% {left: 50px;}
+    100%{left: 0px;}
+  }

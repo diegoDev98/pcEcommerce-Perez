@@ -2,6 +2,7 @@ import React from 'react';
 import CartItem from './CartItem';
 import {useCartContext} from '../../CartContext'
 import EmptyCartIcon from './EmptyCartIcon/EmptyCartIcon'
+import {Link} from 'react-router-dom'
 
 function CartWidget(props) {
     const items = props.content;
@@ -36,6 +37,7 @@ function CartWidget(props) {
             </tbody>
             </table>
             <button className="clearCartIcon" onClick={()=>{clearItems()}}>Clear Items</button>
+            <Link to="/checkout"><button> Checkout</button></Link>
         </div>
        ) : <div className="emptyCart">
            Cart is empty

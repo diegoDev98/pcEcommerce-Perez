@@ -2,7 +2,7 @@ import firebase from 'firebase/app'
 import '@firebase/firestore'
 
   const data = require('./productos.json');
-  const firebaseConfig = firebase.initializeApp({
+  var firebaseConfig = firebase.initializeApp({
     apiKey: "AIzaSyAnQJxCMoSvTSD5_UMnYD0sLR0cfoJnZRU",
     authDomain: "diegodev-ecommerce.firebaseapp.com",
     projectId: "diegodev-ecommerce",
@@ -13,15 +13,13 @@ import '@firebase/firestore'
   });
 
   
-  export function getFirebase() {
-    return firebaseConfig
-  }
 
   export function getFireStore() {
     return firebase.firestore(firebaseConfig)
   }
 
   var db = getFireStore();
+
 
 
 
