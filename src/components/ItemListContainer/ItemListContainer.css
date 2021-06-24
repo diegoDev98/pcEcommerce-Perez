@@ -29,16 +29,16 @@
 
 }
 .itemListContainer h1::before {
-
-   background-color: #222;
-   height: 105%;
-    animation:typewriter 5s steps(22) forwards;
+    background-color: #222;
+    height: 105%;
+    animation:typewriter 2s steps(22) forwards;
+    -webkit-animation:typewriter 2s steps(22) forwards;
 }
 h1::after {
     width: .125em;
     background: white;
-    animation:typewriter 5s steps(22) forwards,
-                blink 500ms steps(22) infinite;
+    animation:typewriter 2s steps(22) forwards,                blink 500ms steps(22) infinite;
+    -webkit-animation:typewriter 2s steps(22) forwards,                blink 500ms steps(22) infinite;
 }
 @keyframes typewriter {
     to {

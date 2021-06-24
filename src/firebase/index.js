@@ -28,7 +28,7 @@ import '@firebase/firestore'
 
  //Function Auxiliar
  //Check if id exists in array of objects
- function userExists(id,arr) {
+ function itemExists(id,arr) {
   return arr.some(function(el) {
     return el.id === id;
   }); 
@@ -40,11 +40,13 @@ import '@firebase/firestore'
 //then compares database collection array with parameter array
 //if the id in the parameter array is not in DB
 //adds that item
-async  function addItems(arr,collection) {
+export async  function addItems(arr,collection) {
+  
+  console.log('item added')
   const snapshot = await db.collection(collection).get()
   const itemsInDB = snapshot.docs.map(doc => doc.data())
   arr.forEach(element => {
-    if(!userExists(element.id,itemsInDB)){
+    if(!itemExists(element.id,itemsInDB)){
 
         db.collection(collection).add(element).then(function(docRef) {
           console.log("Document written with ID: ", docRef.id);
@@ -56,12 +58,14 @@ async  function addItems(arr,collection) {
     }
   }); 
 }//END OF UPDATE ITEMS
+ addItems(data,'items'); 
 
 
 
 //Takes in as parameter an array of objects
 //Deletes any document in collection 'items' that has any of the id's as any of the objects in the parameter array
-async  function deleteItems(arr,collection) {
+export async  function deleteItems(arr,collection) {
+  console.log('item deleted')
   const snapshot = await db.collection(collection).get()
   const itemsInDB = snapshot.docs.map(doc => doc.data())
   arr.forEach(element => {

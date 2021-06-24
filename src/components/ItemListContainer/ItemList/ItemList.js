@@ -13,7 +13,7 @@ function ItemList({items}){
                     
                         <Item 
                             key={index}
-                            initial={1} 
+                            initial={0} 
                             title={u.title} 
                             url={u.url} 
                             price={u.price}  

@@ -33,7 +33,13 @@
     top: 10px;
 }
 
-
+.soldout{
+    transform: scale(0.7);
+    top: 245px;
+    position: absolute;
+    left: 128px;
+    border-bottom-right-radius: 20px;
+}
 .imgcontainer {
     display: flex;
     width: 250px;

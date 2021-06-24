@@ -11,16 +11,16 @@
   
   #arrow {
       position: relative;
-     
-      filter:drop-shadow(1px 1px 10px white);
+           filter:drop-shadow(1px 1px 10px white);
       animation: arrow 700ms linear infinite;
       -webkit-filter:drop-shadow(1px 1px 10px white);
 }
-#arrow,.whatsappDiv {
-    display: inline-block;
-    position: relative;
-    left: 100px;
-}
+
+    #arrow,.whatsappDiv {
+        display: inline-block;
+        position: relative;
+        left: 100px;
+    }
   
   
   

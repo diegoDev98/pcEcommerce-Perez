@@ -6,7 +6,7 @@ import arrow from '../LastSteps/arrow.png'
 
 
 export default function LastSteps(props) {
-
+var width = window.innerWidth;
     return (
         <div className="detalles">
             <h1>Su Compra Fue Realizada Exitosamente!</h1>
@@ -24,7 +24,7 @@ export default function LastSteps(props) {
                 <div>
                     <img src={arrow} width="70" id="arrow" ></img>
                     <div className="whatsappDiv">
-                        <a href="https://web.whatsapp.com/send?phone=5491160334554&text=Realize una compra">
+                        <a href={width>1100? 'https://web.whatsapp.com/send?phone=5491160334554&text=Realize una compra' : 'whatsapp://send?phone=5491160334554&text=Realize una compra'}>
                             <img src="https://img.icons8.com/pastel-glyph/50/000000/whatsapp--v2.png"/>   
                         </a>
                     </div>
