@@ -75,13 +75,13 @@ export default function ItemDetailContainer(){
 
     getProduct()
       .then((products) => {
-          const product = products.filter(u => u.id == id);
+          const product = products.filter(u => u.id === id);
           setArticle(product[0]);
          
       })
       .catch(() => console.log("rejected"));
 
-  }, []);
+  });
 
   return  (
     <div className="itemDetailContainer">
