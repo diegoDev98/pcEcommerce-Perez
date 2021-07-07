@@ -68,7 +68,7 @@ const productsData = [{
 
 
   const [products,setProducts] = useState([]); //inicializa products como state
- const {category} = useParams()
+ const {categoryId} = useParams()
 
   useEffect(() => {
     new Promise( (resolve) => {
@@ -78,16 +78,18 @@ const productsData = [{
       
       function(productsData) { //luego deberia agarrar la info
         let newProductsData;
+        console.log(categoryId);
         
-        (category === 'pcparts')  || (category === 'games') || (category === 'monitors') ? newProductsData = productsData.filter(u => u.category === category): newProductsData = productsData;
+        
+      categoryId ? newProductsData = productsData.filter(u => u.category === categoryId):newProductsData = productsData;
 
         setProducts(newProductsData); //y setearselo a products
                               //esto es para testear que products sea un array de 5 objetos y no vacio
                               //por algun motivo este console devuelve array vacio. Pero si lo hago dentro de el ItemList me devuelve el array lleno. Sin embargo ninguno de los items se renderizan.
-        
+                              console.log(products);
       }
     )  
-  }, [category])
+  }, [categoryId])
   
 //aca pasa array de productos como prop a ItemList para que se renderize en otro componente
 return (
