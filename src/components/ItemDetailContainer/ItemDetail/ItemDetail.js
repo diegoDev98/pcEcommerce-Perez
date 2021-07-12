@@ -7,6 +7,7 @@ import { useCartContext } from '../../CartContext'
 
 export default function ItemDetail({item}) {
 const [stock,setStock] = useState(item.stock)
+console.log(stock);
 
 const {addToCart } = useCartContext();
     return (
