@@ -13,7 +13,7 @@ export default function Checkout() {
     const db= getFireStore()
 
     return (
-        checkout==true ? (
+        checkout===true ? (
         <div className="checkout">
                 <div>
                     <label for="name">Nombre: </label>
@@ -45,7 +45,7 @@ function validate(func,items,total,db) {
     const two = validatePhone()
     const three = validateEmail()
 
-    if(one==true && two == true && three== true){
+    if(one===true && two === true && three=== true){
         const clientInfo = 
             {
                 buyer: {
@@ -76,7 +76,7 @@ function validate(func,items,total,db) {
 function validateName() {
     var name = document.getElementById('name');
     var nameErr = document.getElementById('nameErr');
-    if(name.value==""){
+    if(name.value===""){
         nameErr.innerHTML = 'Name is empty'
         return false
     }
@@ -91,7 +91,7 @@ function validateName() {
 function validatePhone() {
     var phone = document.getElementById('phone');
     var phoneErr = document.getElementById('phoneErr');
-    if(phone.value==""){
+    if(phone.value===""){
         phoneErr.innerHTML = 'Phone is empty'
         return false
     }
@@ -109,7 +109,7 @@ function validateEmail() {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     var bool=re.test(String(email.value).toLowerCase());
 
-    if(email.value==""){
+    if(email.value===""){
         emailErr.innerHTML = 'Email is empty'
         return false;
     }
