@@ -22,10 +22,10 @@ var width = window.innerWidth;
                 </li>
                 <h3>Una vez realizado el pago, comuniquese a este whatsapp con una captura de pantalla del pago.</h3>
                 <div>
-                    <img src={arrow} width="70" id="arrow" ></img>
+                    <img src={arrow} alt='arrowdown' width="70" id="arrow" ></img>
                     <div className="whatsappDiv">
                         <a href={width>1100? 'https://web.whatsapp.com/send?phone=5491160334554&text=Realize una compra' : 'whatsapp://send?phone=5491160334554&text=Realize una compra'}>
-                            <img src="https://img.icons8.com/pastel-glyph/50/000000/whatsapp--v2.png"/>   
+                            <img src="https://img.icons8.com/pastel-glyph/50/000000/whatsapp--v2.png" alt='whatsappIcon'/>   
                         </a>
                     </div>
                     
