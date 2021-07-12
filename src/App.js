@@ -1,19 +1,37 @@
-import logo from './logo.png';
 import './App.css';
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import {BrowserRouter as Router,Route} from 'react-router-dom';
+import { CartProvider } from './components/CartContext';
+import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
+  
   return (
-    <div className="App">
-      <NavBar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div >
+      <Router>
+      <CartProvider>
+        <NavBar />
+  
+        <Route path="/cart">
+          <Cart/>
+        </Route>
+        <Route path="/item/:id">
+          <ItemDetailContainer className="itemDetailContainer" />
+        </Route>
+        <Route exact path={['/','/category/:category']}>
+          <ItemListContainer greeting ="Bienvenido a DiegoTech"/>
+        </Route>
+        <Route path ="/checkout">
+          <Checkout/>
+        </Route>
         
-        <p>
-          Diego's PC Component Store
-        </p>
-       
-      </header>
+        </CartProvider>
+      </Router>
+      
+      
     </div>
   );
 }
