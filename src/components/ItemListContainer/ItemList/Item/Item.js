@@ -20,7 +20,7 @@ function Item(props) {
                     <img src={props.url} alt={props.title} />
                     </div>
                 </Link>
-                {stock==0 &&<img className="soldout" src={soldout}></img>}
+                {stock===0 &&<img className="soldout" src={soldout} alt='soldoutIcon'></img>}
                 <h4>${props.price}</h4>
                 
                 <ItemCount 
