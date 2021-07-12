@@ -1,14 +1,12 @@
 
 import './ItemDetail.css'
 import ItemCount from '../../ItemCount/ItemCount'
-
 import soldout from './../../ItemListContainer/ItemList/Item/soldout.png'
-
+import { useState } from 'react'
 import { useCartContext } from '../../CartContext'
 
 export default function ItemDetail({item}) {
-
-
+const [stock,setStock] = useState(item.stock)
 
 const {addToCart } = useCartContext();
     return (
@@ -26,6 +24,7 @@ const {addToCart } = useCartContext();
                         detailContainer = {true}
                         title={item.title}
                         price = {item.price}
+                        setStock={setStock}
                         id= {item.id}
                         initial={0} 
                         stock={item.stock} 

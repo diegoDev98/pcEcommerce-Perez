@@ -10,7 +10,6 @@ import soldout from './soldout.png'
 function Item(props) {
     const {addToCart } = useCartContext();
     const [stock,setStock] = useState(props.stock)
-
         return (
             <div className="item">
 

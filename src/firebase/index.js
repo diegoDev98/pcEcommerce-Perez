@@ -41,6 +41,9 @@ import '@firebase/firestore'
 //if the id in the parameter array is not in DB
 //adds that item
 export async  function addItems(arr,collection) {
+
+  
+  console.log('item added')
   const snapshot = await db.collection(collection).get()
   const itemsInDB = snapshot.docs.map(doc => doc.data())
   arr.forEach(element => {
@@ -57,8 +60,6 @@ export async  function addItems(arr,collection) {
   }); 
 }//END OF UPDATE ITEMS
  addItems(data,'items'); 
-
-
 
 //Takes in as parameter an array of objects
 //Deletes any document in collection 'items' that has any of the id's as any of the objects in the parameter array
