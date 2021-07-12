@@ -33,7 +33,10 @@ const {addToCart } = useCartContext();
                     />
                 </div>
                 </div> 
-                <img src={soldout} className="detailso"></img>
+               {
+                item.stock===0 &&
+                <img src={soldout} alt ={item.title} className="detailso"></img>
+                }
             </div>
     )
 }
