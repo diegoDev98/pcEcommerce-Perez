@@ -1,8 +1,10 @@
 import React from 'react';
 import './EmptyCartIcon.css'
+import {Link} from 'react-router-dom'
 
 function EmptyCartIcon(props) {
     return (
+        <>
         <div className="empty-cart">
 
         <svg viewBox="656 573 264 182" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -56,6 +58,8 @@ function EmptyCartIcon(props) {
             <path d="M736,577 C737.65825,577 739,578.34175 739,580 C739,578.34175 740.34175,577 742,577 C740.34175,577 739,575.65825 739,574 C739,575.65825 737.65825,577 736,577 Z" id="bubble-rounded" stroke="#3CBC83" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" fill="none"></path>
         </svg>
             </div>
+            <Link to='/' className="VAIBtn">Volver Al Inicio</Link>
+            </>
     );
 }
 

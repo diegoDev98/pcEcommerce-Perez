@@ -15,7 +15,7 @@ export const CartProvider = function({children}){
 		for(var x=0;x<items.length;x++){
 			total += items[x].price;
 		}
-		setItemsInCart(items.length)
+		
 	setTotal(total)
 	} ,[items])
     
@@ -23,15 +23,15 @@ export const CartProvider = function({children}){
 		return items.findIndex((obj => obj.id === id));
 	}
 
-	const addToCart = function(name, quantity, id, price){
+const addToCart =function(name, quantity, id, price){
 		var objIndex = isInCart(id)
-
+		setItemsInCart(prev => prev + quantity)
 		var item =[...items];
-
-		if(objIndex=== -1 ) {
+		console.log(quantity);
+		if(quantity!==0 && objIndex=== -1 ) {
 			item.push({'id': id, 'name': name, 'quantity': quantity, 'price': price*quantity})
 		}
-		else {
+		else if(objIndex===0){
 			item[objIndex].quantity += quantity;
 			item[objIndex].price += price * quantity
 		}
@@ -50,6 +50,7 @@ export const CartProvider = function({children}){
 	
 	const clearItems = function(){
 		setItems([]);
+		setItemsInCart(0)
 	}
 
 return <CartContext.Provider value={{items, setItems, addToCart, removeItem,clearItems,total,itemsInCart}}>

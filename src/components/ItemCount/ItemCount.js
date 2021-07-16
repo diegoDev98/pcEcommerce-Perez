@@ -51,12 +51,12 @@ function ItemCount ({stock , initial, onAdd,title,price,id,detailContainer,setSt
                         setNum(0);
                         setStock(stock-num);
                         reduceItemStock(id,num,db)
-                        detailContainer && setBtnDisplay(true); 
-                        detailContainer && setItemCountDisplay(false);  
+                         setBtnDisplay(true); 
+                        setItemCountDisplay(false);  
                     }} >Agregar Al Carrito</button>
             </div>}
             
-            {btnDisplay  && detailContainer && <Link to='/cart'>
+            {btnDisplay  &&  <Link to='/cart'>
                     <BuyButton /></Link> 
 			}
         </>

@@ -60,16 +60,17 @@
     border: none;
     outline: none;
     background-color: purple;
-    padding: 1rem 90px 1rem 2rem;
+    padding: .5rem 60px .5rem 1rem;
+    margin-top: 15px;
     position: relative;
     border-radius: 8px;
-    letter-spacing: 0.7px;
+    letter-spacing: 0px;
     background-color: #2a8b41;
     color: #fff;
     font-size: 21px;
     font-family: "Lato", sans-serif;
     cursor: pointer;
-    box-shadow: rgba(0, 9, 61, 0.2) 0px 4px 8px 0px;
+    box-shadow: rgb(0 9 61 / 20%) 0px 4px 8px 0px;
   }
   
   
