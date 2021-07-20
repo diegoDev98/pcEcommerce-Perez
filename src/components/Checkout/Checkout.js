@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import './Checkout.css'
-import { useCartContext } from '../CartContext';
+import { useCartContext } from '../../CartContext';
 import { getFireStore } from '../../firebase';
 import LastSteps from './LastSteps/LastSteps';
 

@@ -45,7 +45,7 @@ function ItemCount ({stock , initial, onAdd,title,price,id,detailContainer,setSt
 
                     <button className="counter" onClick={() => { num<stock && setNum(num+1)}}>+</button>
                 </div>
-                <button className="btn btn-primary addToCart" id={stock===0 ? 'disabledbtn' : ''}  onClick={ ()=> 
+                <button className="btn btn-primary addToCart" id={stock===0 || num ===0 ? 'disabledbtn' : ''}  onClick={ ()=> 
                     {
                         onAdd(title, num, id, price);
                         setNum(0);

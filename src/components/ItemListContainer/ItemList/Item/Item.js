@@ -2,7 +2,7 @@ import './Item.css'
 import React,{useState}  from 'react'
 import ItemCount from '../../../ItemCount/ItemCount'
 import {Link} from 'react-router-dom'
-import {useCartContext} from '../../../CartContext'
+import {useCartContext} from '../../../../CartContext'
 import soldout from './soldout.png'
 
 

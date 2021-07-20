@@ -1,14 +1,22 @@
 import React from 'react';
 import CartItem from './CartItem';
-import {useCartContext} from '../../CartContext'
+import {useCartContext} from '../../../CartContext'
 import EmptyCartIcon from './EmptyCartIcon/EmptyCartIcon'
 import {Link} from 'react-router-dom'
 
+function addTotal(total, num) {
+    return total + num;
+  }
+ 
 function CartWidget(props) {
     const items = props.content;
-    const {total} = useCartContext();
     const {clearItems} = useCartContext();
     const {removeItem} = useCartContext();
+    let total = 0;
+    if(items.length > 0){
+        total = items.map(item => item.price).reduce(addTotal)
+    }
+
     return (
         
         items.length>0 ?
