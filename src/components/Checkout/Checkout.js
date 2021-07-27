@@ -16,15 +16,15 @@ export default function Checkout() {
         checkout===true ? (
         <div className="checkout">
                 <div>
-                    <label for="name">Nombre: </label>
+                    <label htmlFor="name">Nombre: </label>
                     <input type="text" id="name" name="name" placeholder="John Doe" onChange={validateName}></input><span id="nameErr"></span>
                 </div>
                 <div>
-                    <label for="name">Phone: </label>
+                    <label htmlFor="name">Phone: </label>
                     <input type="text" id="phone" name="phone" placeholder="11-1111-1111" onChange={validatePhone}></input><span id="phoneErr"></span>
                 </div>
                 <div>
-                    <label for="name">Email: </label>
+                    <label htmlFor="name">Email: </label>
                     <input type="email" id="email" name="email" onChange={validateEmail}></input><span id="emailErr"></span>
                 </div>
                 <div>

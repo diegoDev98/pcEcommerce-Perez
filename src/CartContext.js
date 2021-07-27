@@ -18,7 +18,6 @@ const addToCart =function(name, quantity, id, price){
 		var objIndex = isInCart(id)
 		setItemsInCart(prev => prev + quantity)
 		var item =[...items];
-		console.log(quantity);
 		if(quantity!==0 && objIndex=== -1 ) {
 			item.push({'id': id, 'name': name, 'quantity': quantity, 'price': price*quantity})
 		}
@@ -33,7 +32,6 @@ const addToCart =function(name, quantity, id, price){
 	}
 
 	const removeItem = function(id,num){
-		console.log('he');
 		if (items.length > 0) {
 			const updateItems = items.filter(u=>u.id!==id);
 			setItems(updateItems);
