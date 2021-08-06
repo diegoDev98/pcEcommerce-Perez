@@ -1,0 +1,63 @@
+.itemListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    padding: 60px;
+}
+    
+
+#headerContainer h1 {
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Source Code Pro', monospace;
+    position: relative;
+}
+#headerContainer {
+    background-color: #222;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+#headerContainer h1::before,#headerContainer h1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+#headerContainer h1::before {
+    background-color: #222;
+    height: 105%;
+    animation:typewriter 2s steps(22) forwards;
+    -webkit-animation:typewriter 2s steps(22) forwards;
+}
+h1::after {
+    width: .125em;
+    background: white;
+    animation:typewriter 2s steps(22) forwards,                blink 500ms steps(22) infinite;
+    -webkit-animation:typewriter 2s steps(22) forwards,                blink 500ms steps(22) infinite;
+}
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+@keyframes blink {
+     to {
+         background: transparent;
+     }   
+}
+@media only screen and (max-width:430px){
+    .itemListContainer h1 {
+        font-size: 28px;
+    }
+}
+.maincontainer {
+    display: flex;
+}

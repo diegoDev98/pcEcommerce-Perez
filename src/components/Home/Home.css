@@ -1,0 +1,153 @@
+* {
+    color: white;
+}
+.header {
+    width: 100%;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('/src/assets/home/header2.png');
+}
+img {
+    filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.459));
+    -webkit-filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.459));
+}
+
+.homecontainer {
+    width: 80%;
+    margin: auto;
+    padding: 100px 50px;
+    margin-bottom: 100px ;
+    display: grid;
+    grid-template-rows: auto;
+    position: relative;
+    
+}
+.homecontainer img{
+    height: 450px; 
+    grid-area: img;  
+    margin: auto;
+}
+.homecontainer h2 {
+    grid-area: title;
+    text-align: center;
+}
+.homecontainer h3 {
+    width: 75%;
+    grid-area: desc;
+    word-wrap: break-word;
+    padding: 0 40px;
+    margin: 50px auto 0;
+}
+
+.container1 {
+    grid-template-areas: 
+    "img img title title title title"
+    "img img title title title title"
+    "img img  . . desc desc"
+    "img img  . . desc desc"
+    "img img  . . desc desc";
+}
+
+.container2 {
+    grid-template-areas: 
+    "title title title title img img"
+    "title title title title img img "
+    ". . desc desc img img  "
+    ". . desc desc img img  "
+    ". . desc desc img img  ";
+}
+.container2:after, .container2:before {
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    width: 70%;
+    height: 10px;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(167, 84, 16, 0.397);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.container2:before {
+    top:0;
+}
+.container2::after {
+    bottom: 0;
+}
+.container3 {
+    grid-template-areas: 
+    "img1 img1 title title img2 img2"
+    "img1 img1 title title img2 img2"
+    "img1 img1 desc desc img2 img2"
+    "img1 img1 desc desc img2 img2"
+    "img1 img1 desc desc img2 img2";
+}
+.img1 {
+    grid-area: img1 !important;
+}
+.img2 {
+    grid-area: img2 !important;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+
+@media only screen and (max-width:1700px){
+    .homecontainer {
+        width: 100%;
+    }
+}
+@media only screen and (max-width:1400px){
+    .container3 {
+        grid-template-areas: 
+    "title title title title img img"
+    "title title title title img img "
+    ". . desc desc img img  "
+    ". . desc desc img img  "
+    ". . desc desc img img  ";
+    }
+    .container3 .img2 {
+        grid-area: img !important;
+    }
+    .container3 .img1 {
+        display: none;
+        
+    }
+    .homecontainer {
+        grid-template-areas: 
+        "title"
+        "img"
+        "desc"
+       ;
+    }
+    .homecontainer h3 {
+        width: 70%;
+    }
+    .homecontainer h2 {
+        margin-bottom: 50px;
+    }
+}
+@media only screen and (max-width:1024px){
+    .header{
+        background-image: url('/src/assets/home/header3.jpg');
+    }
+    .header:after {
+        content: 'Sale 50% Placas Madre';
+        float: right;
+        padding: 60px;
+        font-size: 40px;
+        color: white;
+        text-shadow: 5px 5px 5px rgb(0 71 53);
+
+    }
+   
+    .homecontainer img {
+        max-height: 250px;
+    }
+    
+}
+
+

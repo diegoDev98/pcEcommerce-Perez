@@ -1,0 +1,89 @@
+.filtro {
+    font-family: 'Lato,sans-serif';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-basis: 50%;
+    min-width: 320px;
+    max-width: 400px;
+    flex-wrap: wrap;
+    height: fit-content;
+    padding: 50px 0;
+}
+.filtroHeader {
+    color: white;
+    text-align: center;
+    flex-basis: 100%;
+    padding: 20px 0;
+}
+
+
+.subcat {
+    width: 100px;
+    height: 100px; 
+    margin: 0 3px;
+
+}
+.subcatIcon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    margin: auto;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff59;
+
+}
+.subcatTitle {
+    color: white;
+    text-align: center;
+}
+@media only screen and (max-width:850px){
+    .maincontainer {
+        flex-direction: column;
+    }
+    .filtro {
+        margin: auto;
+    }
+}
+
+
+
+
+    .processors {
+        background-image: url(../../assets/Icons/processorIcon.svg);
+    }
+    .motherboards {
+        background-image: url(../../assets/Icons/motherboards.svg);
+    }
+    .ram {
+        background-image: url(../../assets/Icons/ramIcon.svg);
+    }
+    .videocard {
+        background-image: url(../../assets/Icons/targetaGraficoIcon.svg);
+    }
+    .gabinet {
+        background-image: url(../../assets/Icons/gabienetesIcon.svg);
+    }
+    .powersupply {
+        background-image: url(../../assets/Icons/fuentesIcon.svg);
+    }
+    .storage {
+        background-image: url(../../assets/Icons/almacenamientosIcon.svg);
+    }
+    .coolers {
+        background-image: url(../../assets/Icons/coolerIcon.svg);
+    }
+    .accessories {
+        background-image: url(../../assets/Icons/coolerIcon.svg);
+    }
+    .games {
+        background-image: url(../../assets/Icons/gabienetesIcon.svg);
+    }
+    .consoles {
+        background-image: url(../../assets/Icons/consolasIcon.svg);
+    }
+    .monitors {
+        background-image: url(../../assets/Icons/monitoresIcon.svg);
+    }

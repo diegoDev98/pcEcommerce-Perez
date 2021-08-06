@@ -1,0 +1,56 @@
+[  
+   {  
+      "id":1,
+      "title":"Asus Rog Strix B450-f ",
+      "description":"A good motherboard......description",
+      "price":20.000,
+      "stock":5,
+      "category":"pcparts",
+      "url":"/images/asusStrixMB.png"
+   },
+   {  
+       "id":2,
+       "title":"Monitor Pc Gamer Led Ic3 22",
+       "description":"A good motherboard......description",
+       "price":20.000,
+       "stock":10,
+       "category":"monitors",
+       "url":"/images/ic3monitor.png"
+    },
+    {  
+       "id":3,
+       "title":"intel i7 10000k",
+       "description":"A good motherboard......description",
+       "price":20.000,
+       "stock":3,
+       "category":"pcparts",
+       "url":"/images/inteli7.png"
+    },
+    {  
+       "id":4,
+       "title":"INTEL CORE I5 10600K",
+       "description":"A good motherboard......description",
+       "price":20.000,
+       "stock":20,
+       "category":"pcparts",
+       "url":"/images/inteli510600.png"
+    },
+    {  
+       "id":5,
+       "title":"NVIDIA RTX 3080TI",
+       "description":"A good motherboard......description",
+       "price":20.000,
+       "stock":1,
+       "category":"pcparts",
+       "url":"/images/rtx3080ti.png"
+    },
+    {  
+       "id":6,
+       "title":"The Last of Us Part II ",
+       "description":"A good motherboard......description",
+       "price":20.000,
+       "stock":11,
+       "category":"games",
+       "url":"/images/thelastofus2.png"
+    }
+]
