@@ -19,6 +19,21 @@ function NavBar() {
                     <NavLink to='/' activeClassName="activeLink">Home</NavLink>
                   </li>
                   <li>
+                    <NavLink to='/category/monitor' activeClassName="activeLink">Monitores</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to='/category/games' activeClassName="activeLink">Juegos</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to='/category/graphicscard' activeClassName="activeLink">Targeta Grafica</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to='/category/motherboard' activeClassName="activeLink">Placas Madre</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to='/category/processors' activeClassName="activeLink">Procesadores</NavLink>
+                  </li>
+                  <li>
                     <NavLink to='/contact' >Contact</NavLink>
                   </li>
 											
