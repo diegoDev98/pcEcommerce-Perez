@@ -19,9 +19,6 @@ function NavBar() {
                     <NavLink to='/' activeClassName="activeLink">Home</NavLink>
                   </li>
                   <li>
-                    <NavLink to='/products'>PC Parts</NavLink>
-                  </li>
-                  <li>
                     <NavLink to='/contact' >Contact</NavLink>
                   </li>
 											

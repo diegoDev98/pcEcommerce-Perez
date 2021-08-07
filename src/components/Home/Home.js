@@ -1,8 +1,8 @@
 import React from 'react'
 import './Home.css'
-import armatupc from './../../assets/home/armatupc.png'
-import contthree1 from './../../assets/home/contthree1.png'
-import contthree2 from './../../assets/home/contthree2.png'
+import armatupc from './../../assets/images/home/armatupc.png'
+import contthree1 from './../../assets/images/home/contthree1.png'
+import contthree2 from './../../assets/images/home/contthree2.png'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
 
 export default function Home() {
