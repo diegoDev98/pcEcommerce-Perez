@@ -9,7 +9,11 @@ export default function LastSteps(props) {
 var width = window.innerWidth;
     return (
         <div className="detalles">
-            <h1>Su Compra Fue Realizada Exitosamente!</h1>
+            <h1>
+                Su Compra Fue Realizada Exitosamente! <br/>
+                El ID de su compra es: {props.compraID}
+            </h1>
+
             <h2>Pasos a seguir: </h2>
             <ul>
                 <li>

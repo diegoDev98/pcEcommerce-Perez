@@ -5,6 +5,7 @@ export const CartContext = React.createContext([]);
 export const useCartContext = () => useContext(CartContext);
 
 export const CartProvider = function({children}){
+
 	const [items, setItems] = useState([]);
 	const [itemsInCart, setItemsInCart] = useState(0);
 	
@@ -47,7 +48,7 @@ const addToCart =function(name, quantity, id, price){
 		setItemsInCart(0)
 	}
 
-return <CartContext.Provider value={{items, setItems, addToCart, removeItem,clearItems,itemsInCart}}>
+return <CartContext.Provider value={{items, setItems, addToCart, removeItem,clearItems,itemsInCart,setItemsInCart}}>
 {children}
 </CartContext.Provider>
 }

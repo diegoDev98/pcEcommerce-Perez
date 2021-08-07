@@ -20,14 +20,11 @@ function App() {
         <Route path="/cart">
           <Cart/>
         </Route>
-        <Route exact path="/">
+        <Route exact path={['/','/category/:category','/products']}>
           <Home/>
         </Route> 
         <Route path="/item/:id">
           <ItemDetailContainer className="itemDetailContainer" />
-        </Route>
-        <Route exact path={['/category/:category','/products']}>
-          <ItemListContainer greeting ="Bienvenido a DiegoTech"/>
         </Route>
         <Route path ="/checkout">
           <Checkout/>

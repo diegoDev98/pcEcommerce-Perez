@@ -7,8 +7,10 @@ import LastSteps from './LastSteps/LastSteps';
 
 
 export default function Checkout() {
-    const {items} = useCartContext();
+    const {items,setItems} = useCartContext();
+    const {setItemsInCart} = useCartContext()
     const [checkout,setCheckout] = useState(true)
+    const [compraID,setcompraID] =useState()
     const db= getFireStore()
 
     let total = 0;
@@ -31,11 +33,11 @@ export default function Checkout() {
                     <input type="email" id="email" name="email" onChange={validateEmail}></input><span id="emailErr"></span>
                 </div>
                 <div>
-                    <button id="finalizar" onClick={()=>{validate(setCheckout,items,total,db)}}>Finalizar</button>
+                    <button id="finalizar" onClick={()=>{validate(setCheckout,items,total,db,setcompraID,setItems,setItemsInCart)}}>Finalizar</button>
                 </div>
             
         </div>
-        ): <LastSteps></LastSteps>
+        ): <LastSteps compraID = {compraID}></LastSteps>
     )
 }
 
@@ -43,7 +45,7 @@ export default function Checkout() {
 
 var today = new Date().toLocaleDateString();
 
-function validate(func,items,total,db) {
+function validate(func,items,total,db,setcompraID,setItems,setItemsInCart) {
     const one = validateName()
     const two = validatePhone()
     const three = validateEmail()
@@ -62,9 +64,15 @@ function validate(func,items,total,db) {
                     total:total
                 }
             }
-            console.log(clientInfo);
-    
-         db.collection('buyers').add(clientInfo);
+         db.collection('buyers').add(clientInfo)
+         .then(function(docRef) {
+             setcompraID(docRef.id)
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .then(()=> {
+            setItems([]);
+            setItemsInCart(0)
+        });
         
         func(false);
         
